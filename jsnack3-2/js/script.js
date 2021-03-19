@@ -2,45 +2,50 @@ $(document).ready(function() {
 
   var squadre = [
     {
-      'Nome': 'Juventus',
-      'Punti': '',
-      'Falli': ''
+      Nome: 'Juventus',
+      Punti: 0,
+      Falli: 0
     },
     {
-      'Nome': 'Inter',
-      'Punti': '',
-      'Falli': ''
+      Nome: 'Inter',
+      Punti: 0,
+      Falli: 0
     },
     {
-      'Nome': 'Milan',
-      'Punti': '',
-      'Falli': ''
+      Nome: 'Milan',
+      Punti: 0,
+      Falli: 0
     },
     {
-      'Nome': 'Roma',
-      'Punti': '',
-      'Falli': ''
+      Nome: 'Roma',
+      Punti: 0,
+      Falli: 0
     }
   ];
-  console.log(squadre);
+
 
   var newSquadre = [];
 
   for (var i = 0; i < squadre.length; i++) {
     squadre[i].Punti = Math.floor(Math.random() * 15) + 1;
     squadre[i].Falli = Math.floor(Math.random() * 15) + 1;
+  }
+  console.log(squadre);
 
-    newSquadre.push(squadre[i].Nome, squadre[i].Falli);
+  for (var i = 0; i < squadre.length; i++) {
+
+    var obj = ({
+
+      Nome: squadre[i].Nome,
+      Falli: squadre[i].Falli
+
+    });
+
+    newSquadre.push(obj)
+
   }
 
   console.log(newSquadre);
-
-
-
-  // var nietos = [];
-  // nietos.push({"01": nieto.label, "02": nieto.value});
-  // return nietos;
-
 
 
 
