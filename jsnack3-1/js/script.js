@@ -10,7 +10,7 @@ var indexBiciMigliore = 0;
     },
     {
       'Nome': 'Bianchi',
-      'Peso': '700'
+      'Peso': '200'
     },
     {
       'Nome': 'Bottecchia',
@@ -18,13 +18,14 @@ var indexBiciMigliore = 0;
     },
     {
       'Nome': 'Carrera',
-      'Peso': '300'
+      'Peso': '500'
     }
   ];
   // console.log(bici);
 
   for (var i = 0; i < bici.length; i++) {
     if (bici[i].Peso < pesoMinore) {
+      pesoMinore = bici[i].Peso;
       indexBiciMigliore = i;
     }
   }
